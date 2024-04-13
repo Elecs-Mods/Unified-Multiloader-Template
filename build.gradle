@@ -1,0 +1,63 @@
+modloader {
+
+    metadata {
+        issues "https://github.com"
+        sources "https://github.com"
+        mod {
+            homepage "homepage"
+            logo("assets/testmod/icon.png")
+        }
+        dependsOn("minecraft") {
+            versionRange(">=1.20.4", "<1.21")
+        }
+    }
+
+    mixin {
+        mixinPackage = "com.example.minecraft.unified.mixin"
+        clientMixins = ["TitleScreenMixin"]
+    }
+
+// The following values are default values
+///////////////////////////////////////////
+//
+//    Tell gradle to not publish it's own metadata format
+//    noModuleMetadata = true
+//
+//
+//
+// The following are examples
+///////////////////////////////////////////
+//
+//    Generates a *.mixin.json descriptor
+//    mixin {
+//
+//        Generates a *.mixin.json descriptor file, but when true it will not be loaded (added to mod info file or MANIFEST)
+//        generateOnly = false // Default value
+//
+//        Sets the `required` tag in the mixin descriptor file
+//        required = true // Default value
+//
+//        Sets the `mixinPackage` tag in the mixin descriptor file. MUST BE SET!
+//        mixinPackage = null // Default value
+//
+//        Sets the `compatibilityLevel` tag in the mixin descriptor file. Will default to the project level if not set
+//        compatibilityLevel = null // Default value
+//
+//        Sets the `plugin` class (full path) in the mixin descriptor file. [OPTIONAL]
+//        plugin = null // Default value
+//
+//        Sets the `refMap` name in the mixin descriptor file. Will be set to the automatically generated refmap if not filled in manually
+//        refMap = null // Default value
+//
+//        Sets the common `mixins` classes in the mixin descriptor file. [OPTIONAL]
+//        mixins = [] // Default value
+//
+//        Sets the `clientMixins` classes in the mixin descriptor file. [OPTIONAL]
+//        clientMixins = [] // Default value
+//
+//        Sets the `serverMixins` classes in the mixin descriptor file. [OPTIONAL]
+//        serverMixins = [] // Default value
+//
+//    }
+
+}

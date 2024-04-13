@@ -1,0 +1,45 @@
+plugins {
+    id "org.gradle.toolchains.foojay-resolver-convention" version "0.8.0"
+    id "nl.elec332.gradle.minecraft.moddev" version "1.1.0"
+}
+
+moddev {
+    enableForge()
+    enableNeoForge()
+    enableFabric()
+//    enableQuilt() //No point yet as Quilt loads fabric mods
+
+    superCommonMode = true
+    useBuildNumber = true
+
+
+// The following values are default values
+///////////////////////////////////////////
+//
+//    Defines the Java version for all projects
+//    javaVersion = 17
+//
+//    Whether mod info descriptors should be generated
+//    generateModInfo = true
+//
+//    Version of the "idea-ext" plugin to apply to the root project (required to prevent conflicts between modloaders)
+//    ideaExtVersion = "1.1.7"
+//
+//    Whether javadoc should shut it
+//    quietJavaDoc = true
+//
+//    Whether the root project should be used as the common project, or the "common" folder/subproject
+//    rootIsCommon = true
+//
+//    This plugin can also be used to simplify development for just 1 modloader (just enable only 1 loader).
+//    When developing for multiple loaders and due to updates are currently only developing for 1 loader,
+//    this flag will prevent the project being collapsed into a single project for that single loader.
+//    multiProject = true
+//
+//    Whether the mod-version should be "${mod_version}-${mod_version_classifier}" or "${mod_version}.${BUILD_NUMBER}-${mod_version_classifier}"
+//    useBuildNumber = false
+//
+//    Whether to add the modmaven repo to each mod-project
+//    addModMaven = true
+
+}

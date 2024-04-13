@@ -1,0 +1,33 @@
+modloader {
+
+    mixin {
+        mixinPackage = "com.example.minecraft.unified.fabric.mixin"
+        clientMixins = ["ItemRendererMixin"]
+    }
+
+// The following values are default values
+///////////////////////////////////////////
+//
+//    Tells the run(Client/Server/Whatever) what SourceSet to use
+//    runtimeSource = sourceSets.runTarget //Unified target of this project & the common project
+//
+//    Adds the common project as a dependency of the main SourceSet, including it's sources (and resources) in the compile process
+//    addCommonDependency = false //This is handled by the above runtimeSource
+//
+//    Adds the mixins defined in the common project to this project as well
+//    addCommonMixins = true
+//
+//    Adds the common project as a dependency, including it's sources (and resources) in the compile process for ALL SourceSets
+//    Only has an effect if `addCommonDependency` is set to true
+//    addCommonSourceToAll = false
+//
+//    Anything you can define in the common project can be defined here as well (like adding mixins & changing mod descriptor settings), and setting a value already set in the common project will override it for this project
+//
+// Fabric-specific settings
+///////////////////////////////////////////
+//
+//    Adds the Fabric-API as a dependency of this project (version defined by `fabric_version` in gradle.properties)
+//    addApiDependency = false
+//
+
+}
